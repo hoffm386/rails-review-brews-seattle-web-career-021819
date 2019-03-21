@@ -57,7 +57,7 @@ end
 10.times do
   Purchase.create(
     customer_name: Faker::Name.name,
-    price: rand(1..10) + rand,
+    price: Faker::Commerce.price(range = 3..7.0),
     brew: Brew.order("RANDOM()").first
   )
 end
